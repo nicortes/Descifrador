@@ -1,0 +1,16 @@
+mkdir -p build
+mpicc -Wall -g3 -c -o build/blowfish.o blowfish.c
+mkdir -p build
+mpicc -Wall -g3 -c -o build/main.o main.c
+main.c: In function ‘main’:
+main.c:40:9: warning: unused variable ‘salida’ [-Wunused-variable]
+     int salida = EXIT_SUCCESS;
+         ^~~~~~
+main.c: In function ‘verificar’:
+main.c:101:9: warning: variable ‘ver’ set but not used [-Wunused-but-set-variable]
+     int ver;
+         ^~~
+mkdir -p dist
+mpicc -Wall -g3    -o dist/programa build/blowfish.o build/main.o -lssl -lcrypto 
+rm -f -fr build
+rm -f -fr core
