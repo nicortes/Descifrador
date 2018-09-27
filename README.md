@@ -6,7 +6,7 @@
 - Daniel Espinoza.
 
 ## Descripción
-El programa descifra el texto de un archivo, generando otros archivos con las posibles claves. Cada clave tiene entre 6 y 10 caracteres.
+El programa descifra un texto y genera un archivo con las claves. Cada clave tiene entre 6 y 10 caracteres.
 
 ## Requerimientos
 Es necesario tener instalado openssl (sudo apt-get install libssl-dev).
@@ -15,6 +15,10 @@ Para compilar es necesario disponer del programa make (sudo apt-get install make
 make
 
 ## Ejecución (sin corchetes [])
-./dist/programa [ruta]
+Imprimir integrantes:
+./dist/programa -v
 
-ruta: Ruta del archivo con el texto a descifrar.
+Descifrar:
+./dist/programa -f [ruta]
+
+ruta: Ruta donde se creará el archivo claves.txt
