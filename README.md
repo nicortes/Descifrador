@@ -21,4 +21,4 @@ Imprimir integrantes:
 Descifrar:
 ./dist/programa -f [ruta]
 
-ruta: Ruta donde se creará el archivo claves.txt
+ruta: Ruta donde se creará el archivo. Ejemplo: /tmp/claves.txt
